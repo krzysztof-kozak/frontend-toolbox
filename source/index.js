@@ -1,5 +1,8 @@
 import "./style.css";
 import BoxSvg from "./assets/images/box.svg";
+import Data from "./data/data.csv";
+
+console.log(Data);
 
 function component() {
   const h1 = document.createElement("h1");
