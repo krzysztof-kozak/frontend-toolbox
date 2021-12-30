@@ -1,8 +1,11 @@
 import "./style.css";
 import BoxSvg from "./assets/images/box.svg";
-import Data from "./data/data.csv";
+import CsvData from "./data/data.csv";
+import JsonData from "./data/data.json";
 
-console.log(Data);
+console.log(CsvData);
+console.log(JsonData);
+console.log(JsonData.Likes);
 
 function component() {
   const h1 = document.createElement("h1");
