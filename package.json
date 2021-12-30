@@ -1,0 +1,19 @@
+{
+  "name": "frontend-toolbox",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/krzysztof-kozak/frontend-toolbox.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/krzysztof-kozak/frontend-toolbox/issues"
+  },
+  "homepage": "https://github.com/krzysztof-kozak/frontend-toolbox#readme"
+}
