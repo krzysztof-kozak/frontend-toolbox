@@ -1,0 +1,33 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  min-height: 100%;
+
+  color: hsl(0deg 57% 90%);
+  background-color: hsl(0, 5%, 10%);
+
+  display: grid;
+  place-items: center;
+}
+
+h1 {
+  font-size: 3rem;
+  display: flex;
+  gap: 0.25em;
+  flex-wrap: wrap-reverse;
+  justify-content: center;
+}
+
+.logo-svg {
+  width: 1em;
+}
