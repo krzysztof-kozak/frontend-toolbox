@@ -1,8 +1,9 @@
 import "./style.css";
-import BoxSvg from "./box.svg";
+import BoxSvg from "./assets/images/box.svg";
 
 function component() {
   const h1 = document.createElement("h1");
+  h1.classList.add("font-700");
 
   const boxLogo = new Image();
   boxLogo.src = BoxSvg;
