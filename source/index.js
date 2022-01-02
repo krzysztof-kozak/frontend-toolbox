@@ -5,6 +5,7 @@ import JsonData from "./data/data.json";
 import Json5Data from "./data/data.json5";
 import TomlData from "./data/data.toml";
 import Yaml5Data from "./data/data.yaml";
+import printMe from "./print";
 
 console.log(CsvData);
 console.log(JsonData);
@@ -12,7 +13,7 @@ console.log(Json5Data);
 console.log(TomlData);
 console.log(Yaml5Data);
 
-function component() {
+function header() {
   const h1 = document.createElement("h1");
   h1.classList.add("font-700");
 
@@ -29,4 +30,14 @@ function component() {
   return h1;
 }
 
-document.body.appendChild(component());
+function button() {
+  const btn = document.createElement("button");
+  btn.textContent = "Click Me!";
+  btn.classList.add("button");
+  btn.addEventListener("click", () => printMe());
+
+  return btn;
+}
+
+document.body.appendChild(header());
+document.body.appendChild(button());
