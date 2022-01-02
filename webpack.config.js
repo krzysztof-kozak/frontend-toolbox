@@ -3,6 +3,7 @@ const json5 = require("json5");
 const toml = require("toml");
 const yaml = require("yamljs");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 module.exports = {
   mode: "development",
@@ -66,13 +67,14 @@ module.exports = {
     new HtmlWebpackPlugin({
       title: "Webpack - Getting started",
     }),
+    new MiniCssExtractPlugin(),
   ],
 
   module: {
     rules: [
       {
         test: /\.css$/i,
-        use: ["style-loader", "css-loader"],
+        use: [MiniCssExtractPlugin.loader, "css-loader"],
       },
       {
         test: /\.(png|svg|jpg|jpeg|gif)$/i,
