@@ -1,9 +1,8 @@
 import _ from "lodash";
 import button from "./button";
-import "./style.css";
+import styles from "./style.css";
 
 import BoxSvg from "./assets/images/box.svg";
-import printMe from "./print";
 
 function header() {
   const h1 = document.createElement("h1");
@@ -11,7 +10,7 @@ function header() {
 
   const boxLogo = new Image();
   boxLogo.src = BoxSvg;
-  boxLogo.classList.add("logo-svg");
+  boxLogo.classList.add(styles["logo-svg"]);
 
   const paragraph = document.createElement("p");
   paragraph.textContent = _.join(["Hello", "Webpack"], " ");

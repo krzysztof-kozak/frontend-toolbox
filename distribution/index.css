@@ -1,7 +1,7 @@
-/*!*********************************************************************!*\
-  !*** css ./node_modules/css-loader/dist/cjs.js!./source/button.css ***!
-  \*********************************************************************/
-.button {
+/*!*************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[0].use[1]!./source/button.css ***!
+  \*************************************************************************************************/
+.XUe7_so3RVrKavwO7I9F {
   font-size: 1.5rem;
   padding: 0.2em 0.6em;
   border-radius: 8px;
@@ -9,18 +9,18 @@
   cursor: pointer;
 }
 
-.button:hover {
+.XUe7_so3RVrKavwO7I9F:hover {
   background-color: hsl(0deg 0% 100%);
   box-shadow: 0px 0px 2px 1px #000;
 }
 
-.button:active {
+.XUe7_so3RVrKavwO7I9F:active {
   box-shadow: 0 0 3px 1px inset #000;
 }
 
-/*!********************************************************************!*\
-  !*** css ./node_modules/css-loader/dist/cjs.js!./source/style.css ***!
-  \********************************************************************/
+/*!************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[0].use[1]!./source/style.css ***!
+  \************************************************************************************************/
 *,
 *::before,
 *::after {
@@ -44,13 +44,13 @@
   font-style: normal;
 }
 
-.font-400 {
+.DvNYUdAKdUPAr6n4deLo {
   font-family: "My Local Font Regular", sans-serif;
   font-style: normal;
   font-weight: normal;
 }
 
-.font-700 {
+.zlWEJnaawif338uXH_Vs {
   font-family: "My Local Font Bold", sans-serif;
   font-style: normal;
   font-weight: normal;
@@ -78,7 +78,7 @@ h1 {
   justify-content: center;
 }
 
-.logo-svg {
+.W53mMk4kB_BN1Z3jwUPk {
   width: 1em;
 }
 
