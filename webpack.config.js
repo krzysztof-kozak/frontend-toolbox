@@ -46,21 +46,20 @@ module.exports = {
 
     index: {
       import: "./source/index.js",
-      dependOn: "shared",
     },
-
-    print: {
-      import: "./source/print.js",
-      dependOn: "shared",
-    },
-
-    shared: "lodash",
   },
 
   output: {
     filename: "[name].bundle.js",
     path: path.resolve(__dirname, "distribution"),
     clean: true,
+  },
+
+  optimization: {
+    runtimeChunk: "single",
+    splitChunks: {
+      chunks: "all",
+    },
   },
 
   plugins: [
