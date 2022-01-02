@@ -3,10 +3,14 @@ import BoxSvg from "./assets/images/box.svg";
 import CsvData from "./data/data.csv";
 import JsonData from "./data/data.json";
 import Json5Data from "./data/data.json5";
+import TomlData from "./data/data.toml";
+import Yaml5Data from "./data/data.yaml";
 
 console.log(CsvData);
 console.log(JsonData);
 console.log(Json5Data);
+console.log(TomlData);
+console.log(Yaml5Data);
 
 function component() {
   const h1 = document.createElement("h1");
