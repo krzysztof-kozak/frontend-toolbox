@@ -6,7 +6,15 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = {
   mode: "development",
+
   devtool: "inline-source-map",
+
+  devServer: {
+    host: "localhost",
+    port: "8080",
+    static: "./distribution",
+    watchFiles: ["./source/**/*"],
+  },
 
   entry: {
     index: "./source/index.js",
