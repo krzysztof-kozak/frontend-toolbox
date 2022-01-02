@@ -17,8 +17,17 @@ module.exports = {
   },
 
   entry: {
-    index: "./source/index.js",
-    print: "./source/print.js",
+    index: {
+      import: "./source/index.js",
+      dependOn: "shared",
+    },
+
+    print: {
+      import: "./source/print.js",
+      dependOn: "shared",
+    },
+
+    shared: "lodash",
   },
 
   output: {
