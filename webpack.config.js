@@ -31,6 +31,7 @@ module.exports = {
 
 	optimization: {
 		runtimeChunk: 'single',
+		moduleIds: 'deterministic',
 		splitChunks: {
 			chunks: 'all',
 			cacheGroups: {
