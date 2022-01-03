@@ -3,6 +3,8 @@ import styles from './style.css';
 
 import BoxSvg from './assets/images/box.svg';
 
+[1, 2, 3].map((n) => n + 1);
+
 function header() {
 	const h1 = document.createElement('h1');
 	h1.classList.add('font-700');
