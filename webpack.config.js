@@ -5,101 +5,103 @@ const yaml = require('yamljs');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
-module.exports = {
-	mode: 'development',
+module.exports = (env) => {
+	return {
+		mode: 'development',
 
-	devtool: 'inline-source-map',
+		devtool: 'inline-source-map',
 
-	devServer: {
-		host: 'localhost',
-		port: '8080',
-		static: './distribution',
-		watchFiles: ['./source/**/*'],
-	},
-
-	entry: {
-		index: {
-			import: './source/index.js',
+		devServer: {
+			host: 'localhost',
+			port: '8080',
+			static: './distribution',
+			watchFiles: ['./source/**/*'],
 		},
-	},
 
-	output: {
-		filename: '[name].[contenthash].bundle.js',
-		path: path.resolve(__dirname, 'distribution'),
-		clean: true,
-	},
-
-	optimization: {
-		runtimeChunk: 'single',
-		moduleIds: 'deterministic',
-		splitChunks: {
-			chunks: 'all',
-			cacheGroups: {
-				vendor: {
-					test: /[\\/]node_modules[\\/]/,
-					name: 'vendors',
-					chunks: 'all',
-				},
+		entry: {
+			index: {
+				import: './source/index.js',
 			},
 		},
-	},
 
-	plugins: [
-		new HtmlWebpackPlugin({
-			title: 'Webpack - Getting started',
-		}),
-		new MiniCssExtractPlugin(),
-	],
+		output: {
+			filename: '[name].[contenthash].bundle.js',
+			path: path.resolve(__dirname, 'distribution'),
+			clean: true,
+		},
 
-	module: {
-		rules: [
-			{
-				test: /\.css$/i,
-				use: [
-					MiniCssExtractPlugin.loader,
-					{
-						loader: 'css-loader',
-						options: {
-							importLoaders: 1,
-							modules: true,
-						},
+		optimization: {
+			runtimeChunk: 'single',
+			moduleIds: 'deterministic',
+			splitChunks: {
+				chunks: 'all',
+				cacheGroups: {
+					vendor: {
+						test: /[\\/]node_modules[\\/]/,
+						name: 'vendors',
+						chunks: 'all',
 					},
-				],
+				},
 			},
-			{
-				test: /\.(png|svg|jpg|jpeg|gif)$/i,
-				type: 'asset/resource',
-			},
-			{
-				test: /\.(woff|woff2|eot|ttf|otf)$/i,
-				type: 'asset/resource',
-			},
+		},
 
-			{
-				test: /\.csv$/i,
-				use: ['csv-loader'],
-			},
-			{
-				test: /\.json5$/i,
-				type: 'json',
-				parser: {
-					parse: json5.parse,
-				},
-			},
-			{
-				test: /\.toml$/i,
-				type: 'json',
-				parser: {
-					parse: toml.parse,
-				},
-			},
-			{
-				test: /\.yaml$/i,
-				type: 'json',
-				parser: {
-					parse: yaml.parse,
-				},
-			},
+		plugins: [
+			new HtmlWebpackPlugin({
+				title: 'Webpack - Getting started',
+			}),
+			new MiniCssExtractPlugin(),
 		],
-	},
+
+		module: {
+			rules: [
+				{
+					test: /\.css$/i,
+					use: [
+						MiniCssExtractPlugin.loader,
+						{
+							loader: 'css-loader',
+							options: {
+								importLoaders: 1,
+								modules: true,
+							},
+						},
+					],
+				},
+				{
+					test: /\.(png|svg|jpg|jpeg|gif)$/i,
+					type: 'asset/resource',
+				},
+				{
+					test: /\.(woff|woff2|eot|ttf|otf)$/i,
+					type: 'asset/resource',
+				},
+
+				{
+					test: /\.csv$/i,
+					use: ['csv-loader'],
+				},
+				{
+					test: /\.json5$/i,
+					type: 'json',
+					parser: {
+						parse: json5.parse,
+					},
+				},
+				{
+					test: /\.toml$/i,
+					type: 'json',
+					parser: {
+						parse: toml.parse,
+					},
+				},
+				{
+					test: /\.yaml$/i,
+					type: 'json',
+					parser: {
+						parse: yaml.parse,
+					},
+				},
+			],
+		},
+	};
 };
