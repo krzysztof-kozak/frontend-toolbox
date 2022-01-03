@@ -72,18 +72,25 @@ module.exports = (env) => {
 				},
 
 				{
-					test: /\.css$/i,
-					use: [
-						MiniCssExtractPlugin.loader,
+					test: /\.s?css$/,
+					oneOf: [
 						{
-							loader: 'css-loader',
-							options: {
-								importLoaders: 1,
-								modules: true,
-							},
+							test: /\.module\.s?css$/,
+							use: [
+								MiniCssExtractPlugin.loader,
+								{
+									loader: 'css-loader',
+									options: { modules: true },
+								},
+								'sass-loader',
+							],
+						},
+						{
+							use: [MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader'],
 						},
 					],
 				},
+
 				{
 					test: /\.(png|svg|jpg|jpeg|gif)$/i,
 					type: 'asset/resource',

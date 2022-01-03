@@ -1,5 +1,7 @@
+// These are global styles (a default css behaviour)
+import './style.scss';
+
 import button from './button';
-import styles from './style.css';
 
 import BoxSvg from './assets/images/box.svg';
 
@@ -11,7 +13,7 @@ function header() {
 
 	const boxLogo = new Image();
 	boxLogo.src = BoxSvg;
-	boxLogo.classList.add(styles['logo-svg']);
+	boxLogo.classList.add('logo-svg');
 
 	const paragraph = document.createElement('p');
 	paragraph.textContent = _.join(['Hello', 'Webpack'], ' ');
