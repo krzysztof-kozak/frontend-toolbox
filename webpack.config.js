@@ -2,6 +2,7 @@ const path = require('path');
 const json5 = require('json5');
 const toml = require('toml');
 const yaml = require('yamljs');
+const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
@@ -49,7 +50,12 @@ module.exports = (env) => {
 			new HtmlWebpackPlugin({
 				title: 'Webpack - Getting started',
 			}),
+
 			new MiniCssExtractPlugin(),
+
+			new webpack.ProvidePlugin({
+				_: 'lodash',
+			}),
 		],
 
 		module: {

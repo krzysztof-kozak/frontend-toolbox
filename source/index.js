@@ -1,4 +1,3 @@
-import _ from 'lodash';
 import button from './button';
 import styles from './style.css';
 
