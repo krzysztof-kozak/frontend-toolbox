@@ -9,7 +9,7 @@ module.exports = (env) => {
 	return {
 		mode: 'development',
 
-		devtool: 'inline-source-map',
+		devtool: 'eval-cheap-module-source-map',
 
 		devServer: {
 			host: 'localhost',
