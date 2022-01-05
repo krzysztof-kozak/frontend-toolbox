@@ -1,13 +1,8 @@
-const path = require('path');
-const json5 = require('json5');
-const toml = require('toml');
-const yaml = require('yamljs');
-const webpack = require('webpack');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
-const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const { merge } = require('webpack-merge');
+const common = require('./webpack.common.js');
 
 module.exports = ({ mode }) => {
-	return {
+	return merge(common, {
 		mode: mode,
 		devtool: 'eval-cheap-module-source-map',
 
@@ -16,18 +11,6 @@ module.exports = ({ mode }) => {
 			port: '8080',
 			static: './distribution',
 			watchFiles: ['./source/**/*'],
-		},
-
-		entry: {
-			index: {
-				import: './source/index.js',
-			},
-		},
-
-		output: {
-			filename: '[name].bundle.js',
-			path: path.resolve(__dirname, 'distribution'),
-			clean: true,
 		},
 
 		optimization: {
@@ -64,103 +47,5 @@ module.exports = ({ mode }) => {
 			*/
 			moduleIds: 'named',
 		},
-
-		plugins: [
-			new HtmlWebpackPlugin({
-				title: 'Webpack - Getting started',
-			}),
-
-			new MiniCssExtractPlugin(),
-
-			new webpack.ProvidePlugin({
-				_: 'lodash',
-			}),
-		],
-
-		module: {
-			rules: [
-				{
-					test: /\.m?js$/,
-					exclude: /node_modules/,
-					use: {
-						loader: 'babel-loader',
-						options: {
-							presets: ['@babel/preset-env'],
-						},
-					},
-				},
-
-				{
-					test: /\.s?css$/,
-					oneOf: [
-						{
-							test: /\.module\.s?css$/,
-							use: [
-								MiniCssExtractPlugin.loader,
-								{
-									loader: 'css-loader',
-									options: { modules: true },
-								},
-								'postcss-loader',
-								'sass-loader',
-							],
-						},
-						{
-							use: [
-								MiniCssExtractPlugin.loader,
-								'css-loader',
-								'postcss-loader',
-								'sass-loader',
-							],
-						},
-					],
-				},
-
-				// Let webpack handle loading and optimizing images.
-				{
-					test: /\.(png|svg|jpg|jpeg|gif)$/i,
-					type: 'asset/resource',
-				},
-
-				// Let webpack handle using local fonts.
-				{
-					test: /\.(woff|woff2|eot|ttf|otf)$/i,
-					type: 'asset/resource',
-				},
-
-				/*
-				Let webpack handle using different data formats:
-					- csv
-					- toml
-					- yaml
-					- json
-				*/
-				{
-					test: /\.csv$/i,
-					use: ['csv-loader'],
-				},
-				{
-					test: /\.json5$/i,
-					type: 'json',
-					parser: {
-						parse: json5.parse,
-					},
-				},
-				{
-					test: /\.toml$/i,
-					type: 'json',
-					parser: {
-						parse: toml.parse,
-					},
-				},
-				{
-					test: /\.yaml$/i,
-					type: 'json',
-					parser: {
-						parse: yaml.parse,
-					},
-				},
-			],
-		},
-	};
+	});
 };
