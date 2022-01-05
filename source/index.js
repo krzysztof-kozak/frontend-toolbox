@@ -2,7 +2,6 @@
 import './style.scss';
 
 import button from './button';
-
 import BoxSvg from './assets/images/box.svg';
 
 [1, 2, 3].map((n) => n + 1);
