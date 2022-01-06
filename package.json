@@ -7,7 +7,8 @@
     "watch": "webpack --watch",
     "build": "webpack --env mode=production --config webpack.production.js",
     "start": "webpack serve --open --env mode=development --config webpack.development.js",
-    "test": "jest",
+    "test": "jest --verbose",
+    "test-watch": "jest --watch --verbose",
     "lint": "npx eslint . --color",
     "lint-fix": "npx eslint . --fix --color"
   },
