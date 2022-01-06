@@ -4,10 +4,10 @@ import style from './button.module.scss';
 import printMe from './print';
 
 export default function button() {
-	const btn = document.createElement('button');
-	btn.textContent = 'Click Me!';
-	btn.classList.add(style.button);
-	btn.addEventListener('click', () => printMe());
+  const btn = document.createElement('button');
+  btn.textContent = 'Click Me!';
+  btn.classList.add(style.button);
+  btn.addEventListener('click', () => printMe());
 
-	return btn;
+  return btn;
 }

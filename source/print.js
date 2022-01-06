@@ -1,4 +1,4 @@
 export default function printMe() {
-	const fileName = _.join(['print', 'js'], '.');
-	console.log(`I get called from ${fileName}!`);
+  const fileName = _.join(['print', 'js'], '.');
+  console.log(`I get called from ${fileName}!`);
 }

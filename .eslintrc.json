@@ -1,0 +1,36 @@
+{
+  /*
+    plugin:prettier/recommended"
+    This is a shorthand notation. It does the following things:
+        - Turns off ESLint rules that conflict with Prettier.
+        - Registers the "prettier" plugin.
+        - Runs prettier as an ESLint rule.
+
+    Learn More: https://github.com/prettier/eslint-plugin-prettier#recommended-configuration
+*/
+  "extends": ["airbnb-base", "plugin:prettier/recommended"],
+
+  "rules": {
+    "import/no-extraneous-dependencies": [
+      "error",
+      { "devDependencies": ["**/*.test.js", "**/webpack.*.js"] }
+    ]
+  },
+
+  // Tell eslint that we are using a global _ variable from lodash library.
+  // You can add other globals, too.
+  "globals": { "_": true },
+
+  "env": {
+    "browser": true,
+    "es2021": true
+  },
+
+  "parserOptions": {
+    "sourceType": "module",
+    "ecmaVersion": "latest",
+    "ecmaFeatures": {
+      "impliedStrict": true
+    }
+  }
+}

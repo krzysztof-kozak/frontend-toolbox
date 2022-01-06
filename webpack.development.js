@@ -1,20 +1,20 @@
 const { merge } = require('webpack-merge');
-const common = require('./webpack.common.js');
+const common = require('./webpack.common');
 
 module.exports = ({ mode }) => {
-	return merge(common, {
-		mode: mode,
-		devtool: 'eval-cheap-module-source-map',
+  return merge(common, {
+    mode,
+    devtool: 'eval-cheap-module-source-map',
 
-		devServer: {
-			host: 'localhost',
-			port: '8080',
-			static: './distribution',
-			watchFiles: ['./source/**/*'],
-		},
+    devServer: {
+      host: 'localhost',
+      port: '8080',
+      static: './distribution',
+      watchFiles: ['./source/**/*'],
+    },
 
-		optimization: {
-			/*
+    optimization: {
+      /*
 			In most cases, 'multiple' (default) value will work out well.
 			
 			Change this to 'single' if you are running multiple entry points.
@@ -32,9 +32,9 @@ module.exports = ({ mode }) => {
 			-https://stackoverflow.com/questions/65640449/how-to-solve-chunkloaderror-loading-hot-update-chunk-second-app-failed-in-webpa
 			
 			*/
-			runtimeChunk: 'multiple',
+      runtimeChunk: 'multiple',
 
-			/* 
+      /* 
 			For better development / debugging purposes, we used 'named' ids here.
 
 			The generated bundles will use readable names such as:
@@ -45,7 +45,7 @@ module.exports = ({ mode }) => {
 			When in production mode, we will use "deterministic" module ids.
 			This is explained in the production config file.
 			*/
-			moduleIds: 'named',
-		},
-	});
+      moduleIds: 'named',
+    },
+  });
 };
