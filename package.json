@@ -1,46 +1,49 @@
 {
-	"name": "frontend-toolbox",
-	"version": "1.0.0",
-	"description": "",
-	"main": "index.js",
-	"scripts": {
-		"build": "webpack --env mode=production --config webpack.production.js",
-		"watch": "webpack --watch",
-		"start": "webpack serve --open --env mode=development --config webpack.development.js"
-	},
-	"repository": {
-		"type": "git",
-		"url": "git+https://github.com/krzysztof-kozak/frontend-toolbox.git"
-	},
-	"author": "",
-	"license": "ISC",
-	"bugs": {
-		"url": "https://github.com/krzysztof-kozak/frontend-toolbox/issues"
-	},
-	"homepage": "https://github.com/krzysztof-kozak/frontend-toolbox#readme",
-	"devDependencies": {
-		"@babel/core": "^7.16.7",
-		"@babel/preset-env": "^7.16.7",
-		"autoprefixer": "^10.4.1",
-		"babel-loader": "^8.2.3",
-		"css-loader": "^6.5.1",
-		"cssnano": "^5.0.14",
-		"csv-loader": "^3.0.3",
-		"html-webpack-plugin": "^5.5.0",
-		"json5": "^2.2.0",
-		"lodash": "^4.17.21",
-		"mini-css-extract-plugin": "^2.4.5",
-		"postcss": "^8.4.5",
-		"postcss-loader": "^6.2.1",
-		"postcss-preset-env": "^7.2.0",
-		"sass": "^1.45.2",
-		"sass-loader": "^12.4.0",
-		"style-loader": "^3.3.1",
-		"toml": "^3.0.0",
-		"webpack": "^5.65.0",
-		"webpack-cli": "^4.9.1",
-		"webpack-dev-server": "^4.7.2",
-		"webpack-merge": "^5.8.0",
-		"yamljs": "^0.3.0"
-	}
+  "name": "frontend-toolbox",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "webpack --env mode=production --config webpack.production.js",
+    "watch": "webpack --watch",
+    "start": "webpack serve --open --env mode=development --config webpack.development.js",
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/krzysztof-kozak/frontend-toolbox.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/krzysztof-kozak/frontend-toolbox/issues"
+  },
+  "homepage": "https://github.com/krzysztof-kozak/frontend-toolbox#readme",
+  "devDependencies": {
+    "@babel/core": "^7.16.7",
+    "@babel/preset-env": "^7.16.7",
+    "autoprefixer": "^10.4.1",
+    "babel-jest": "^27.4.6",
+    "babel-loader": "^8.2.3",
+    "css-loader": "^6.5.1",
+    "cssnano": "^5.0.14",
+    "csv-loader": "^3.0.3",
+    "html-webpack-plugin": "^5.5.0",
+    "jest": "^27.4.7",
+    "json5": "^2.2.0",
+    "lodash": "^4.17.21",
+    "mini-css-extract-plugin": "^2.4.5",
+    "postcss": "^8.4.5",
+    "postcss-loader": "^6.2.1",
+    "postcss-preset-env": "^7.2.0",
+    "sass": "^1.45.2",
+    "sass-loader": "^12.4.0",
+    "style-loader": "^3.3.1",
+    "toml": "^3.0.0",
+    "webpack": "^5.65.0",
+    "webpack-cli": "^4.9.1",
+    "webpack-dev-server": "^4.7.2",
+    "webpack-merge": "^5.8.0",
+    "yamljs": "^0.3.0"
+  }
 }
