@@ -4,6 +4,7 @@ const common = require('./webpack.common.js');
 module.exports = ({ mode }) => {
 	return merge(common, {
 		mode: mode,
+		devtool: 'source-map',
 		optimization: {
 			/*
 			splitChunks: 'all' allows webpack to extract duplicate dependencies.
