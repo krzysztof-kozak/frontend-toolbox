@@ -13,7 +13,9 @@
   "rules": {
     "import/no-extraneous-dependencies": [
       "error",
-      { "devDependencies": ["**/*.test.js", "**/webpack.*.js"] }
+      {
+        "devDependencies": ["**/*.test.js", "**/webpack.*.js", "**/*.config.*"]
+      }
     ]
   },
 
@@ -23,7 +25,8 @@
 
   "env": {
     "browser": true,
-    "es2021": true
+    "es2021": true,
+    "jest": true
   },
 
   "parserOptions": {

@@ -1,9 +1,12 @@
+const autoprefixer = require('autoprefixer');
+const cssnano = require('cssnano');
+
 module.exports = ({ mode }) => {
-	const plugins = [require('autoprefixer')];
+  const plugins = [autoprefixer];
 
-	if (mode === 'production') {
-		plugins.push(require('cssnano'));
-	}
+  if (mode === 'production') {
+    plugins.push(cssnano);
+  }
 
-	return plugins;
+  return plugins;
 };

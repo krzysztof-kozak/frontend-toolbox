@@ -4,11 +4,12 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "webpack --env mode=production --config webpack.production.js",
     "watch": "webpack --watch",
+    "build": "webpack --env mode=production --config webpack.production.js",
     "start": "webpack serve --open --env mode=development --config webpack.development.js",
     "test": "jest",
-    "lint": "npx eslint ."
+    "lint": "npx eslint . --color",
+    "lint-fix": "npx eslint . --fix --color"
   },
   "repository": {
     "type": "git",
