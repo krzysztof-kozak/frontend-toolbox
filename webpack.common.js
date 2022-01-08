@@ -1,5 +1,6 @@
 const path = require('path');
 const webpack = require('webpack');
+const CopyPlugin = require('copy-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
@@ -18,7 +19,11 @@ module.exports = {
 
   plugins: [
     new HtmlWebpackPlugin({
-      title: 'Frontend Toolbox',
+      template: './source/pages/index.html',
+    }),
+
+    new CopyPlugin({
+      patterns: [{ from: 'public' }],
     }),
 
     new MiniCssExtractPlugin(),
