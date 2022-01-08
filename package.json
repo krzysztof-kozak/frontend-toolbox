@@ -10,7 +10,8 @@
     "test": "jest --verbose",
     "test-watch": "jest --watch --verbose",
     "lint": "npx eslint . --color",
-    "lint-fix": "npx eslint . --fix --color"
+    "lint-fix": "npx eslint . --fix --color",
+    "prepare": "husky install"
   },
   "repository": {
     "type": "git",
@@ -38,7 +39,9 @@
     "eslint-plugin-prettier": "^4.0.0",
     "html-loader": "^3.0.1",
     "html-webpack-plugin": "^5.5.0",
+    "husky": "^7.0.4",
     "jest": "^27.4.7",
+    "lint-staged": "^12.1.7",
     "lodash": "^4.17.21",
     "mini-css-extract-plugin": "^2.4.5",
     "postcss": "^8.4.5",

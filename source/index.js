@@ -1,7 +1,6 @@
 // These are global styles (a default css behaviour)
 import './css/reset.css';
 import './css/style.scss';
-
 import { button, infoBox, logo, getRandomGreeting } from './components';
 
 const [box, info] = infoBox;
