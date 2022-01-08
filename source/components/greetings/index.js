@@ -1,1 +1,1 @@
-export { default as getRandomGreeting } from './greetings';
+export { default as getRandomGreeting, randomGreetings } from './greetings';

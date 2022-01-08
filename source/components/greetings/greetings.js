@@ -5,3 +5,5 @@ export default function getRandomGreeting() {
   const randomIndex = Math.floor(Math.random() * maxIndex);
   return randomGreetings[randomIndex];
 }
+
+export { randomGreetings };
