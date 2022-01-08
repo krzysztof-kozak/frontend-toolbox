@@ -23,6 +23,8 @@ module.exports = {
     }),
 
     new CopyPlugin({
+      // Tell webpack to copy assets from public to distrubiution
+      // This is useful for our favicon generation
       patterns: [{ from: 'public' }],
     }),
 
