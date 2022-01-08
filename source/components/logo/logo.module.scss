@@ -1,0 +1,27 @@
+/*
+This scss file is scoped locally!
+
+We don't need to worry that the .button class will be overwritten
+anywhere else in our project!
+
+This rule applies to all files with this pattern:
+	- *.module.css
+	- *.module.scss
+
+Check webpack config file to see how I did it.
+*/
+
+.logoSvg {
+  width: 1em;
+}
+
+.title {
+  font-size: clamp(2rem, 3rem, 10vw);
+  margin-top: 1em;
+  margin-bottom: 1em;
+
+  display: flex;
+  gap: 0.25em;
+  flex-wrap: wrap-reverse;
+  justify-content: center;
+}

@@ -1,25 +1,17 @@
 // These are global styles (a default css behaviour)
-import './style.scss';
+import './css/reset.css';
+import './css/style.scss';
 
-import button from './button';
-import BoxSvg from './assets/images/box.svg';
+import { button, infoBox, logo, getRandomGreeting } from './components';
 
-function header() {
-  const h1 = document.createElement('h1');
-  h1.classList.add('font-700');
+const [box, info] = infoBox;
 
-  const boxLogo = new Image();
-  boxLogo.src = BoxSvg;
-  boxLogo.classList.add('logo-svg');
+button.addEventListener('click', handleClick);
 
-  const paragraph = document.createElement('p');
-  paragraph.textContent = _.join(['Hello', 'Webpack'], ' ');
-
-  h1.appendChild(boxLogo);
-  h1.appendChild(paragraph);
-
-  return h1;
+function handleClick() {
+  info.textContent = getRandomGreeting();
 }
 
-document.body.appendChild(header());
-document.body.appendChild(button());
+document.body.appendChild(logo);
+document.body.appendChild(button);
+document.body.appendChild(box);

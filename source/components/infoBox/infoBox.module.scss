@@ -1,0 +1,33 @@
+/*
+This scss file is scoped locally!
+
+We don't need to worry that the .button class will be overwritten
+anywhere else in our project!
+
+This rule applies to all files with this pattern:
+	- *.module.css
+	- *.module.scss
+
+Check webpack config file to see how I did it.
+*/
+
+.box {
+  width: 90%;
+  max-width: 800px;
+  margin: 5em auto 0;
+
+  border: 1px solid hsl(0, 0%, 100%);
+  border-radius: 4px;
+
+  padding: 0.5em;
+}
+
+.title {
+  font-size: clamp(1rem, 1.5rem, 10vw);
+  margin-bottom: 1.5em;
+  color: hsl(0deg 100% 60%);
+}
+
+.info {
+  font-style: italic;
+}

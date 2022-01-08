@@ -1,0 +1,54 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/*
+I've setup an asset/resource loader.
+Webpack can now process our custom font files!
+*/
+
+@font-face {
+  font-family: 'My Local Font Bold';
+  src: url(../assets/fonts/IBM_Plex_Sans/IBMPlexSans-Bold.ttf)
+    format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'My Local Font Regular';
+  src: url(../assets/fonts/IBM_Plex_Sans/IBMPlexSans-Regular.ttf)
+    format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+/*
+You may encounter some gotchas with using @font-face declaration.
+Check out this helpful article:
+https://www.smashingmagazine.com/2013/02/setting-weights-and-styles-at-font-face-declaration
+*/
+.font-700 {
+  font-family: 'My Local Font Bold', sans-serif;
+  font-style: normal;
+  font-weight: normal;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  font-family: 'My Local Font Regular', sans-serif;
+  font-style: normal;
+  font-weight: normal;
+
+  color: hsl(0deg 57% 90%);
+  background-color: hsl(0, 5%, 10%);
+
+  min-height: 100%;
+}

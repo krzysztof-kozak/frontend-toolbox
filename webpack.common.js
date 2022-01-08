@@ -18,7 +18,7 @@ module.exports = {
 
   plugins: [
     new HtmlWebpackPlugin({
-      title: 'Frontend Toolbox - by Kris Kozak',
+      title: 'Frontend Toolbox',
     }),
 
     new MiniCssExtractPlugin(),
@@ -30,6 +30,25 @@ module.exports = {
 
   module: {
     rules: [
+      {
+        // Tell Webpack to parse html files and process them.
+        test: /\.html$/i,
+        loader: 'html-loader',
+        options: {
+          sources: {
+            list: [
+              // Tell webpack to import and process images inside html files.
+              // Learn more: https://webpack.js.org/loaders/html-loader/#sources
+              {
+                tag: 'img',
+                attribute: 'src',
+                type: 'src',
+              },
+            ],
+          },
+        },
+      },
+
       {
         test: /\.m?js$/,
         exclude: /node_modules/,
