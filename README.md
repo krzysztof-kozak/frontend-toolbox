@@ -111,3 +111,5 @@ You don't need to run the lint command over and over again. This can be easily i
   "eslint.format.enable": true,
   "eslint.alwaysShowStatus": true,
   ```
+
+- Also, be sure to install ESLint extension: https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint
