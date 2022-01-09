@@ -115,3 +115,17 @@ You don't need to run the lint command over and over again. This can be easily i
   ```
 
 - Also, be sure to install ESLint extension: https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint
+
+## Some examples
+
+CSS Modules:
+![](https://i.ibb.co/Vtz8JBz/cssmodules.png)
+
+Pre-commit hooks:
+![](https://i.ibb.co/c1xPPmK/pre-commit1.png)
+
+Pre-commit hooks:
+![](https://i.ibb.co/WgbvWSV/pre-commit2.png)
+
+Pre-commit hooks:
+![](https://i.ibb.co/kGXngfx/pre-commit3.png)
