@@ -62,6 +62,7 @@ A webkit starter template with all the tools you need for developement and produ
   - Integration with visual studio code: lint --fix and format your code on save.
   - Integration with visual studio code: see linting errors/warnings directly in your editor in real time.
   - Barrels pattern for imports/exports. Learn more: https://hackernoon.com/react-project-architecture-using-barrels-d086146eb0f6
+  - Deploy script for automatically publishing on gh-pages.
 
 ---
 
@@ -82,6 +83,7 @@ A webkit starter template with all the tools you need for developement and produ
 
 - Create production build: `npm run build`
 - Start dev server: `npm run start`
+- Deploy project on gh-pages: `npm run deploy`
 - Run tests: `npm run test`
 - Run tests in watch mode: `npm run test-watch`
 - Lint: `npm run lint`
