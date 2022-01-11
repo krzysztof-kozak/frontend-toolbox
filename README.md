@@ -14,6 +14,7 @@ A webkit starter template with all the tools you need for developement and produ
   - Load and Optimize images and gifs.
   - Load font files to use as local fonts.
   - Transpile JavaSCript with Babel.
+  - Automatically add polyfils "as needed" with core-js@3
   - Automatically load modules/libraries - no need to import/require them everywhere.
 
 ---
