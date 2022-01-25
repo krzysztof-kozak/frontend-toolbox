@@ -1,0 +1,2 @@
+// This is so that jest doesn't complain aobut ECMAScript modules.
+{ "presets": ["@babel/preset-env"] }
